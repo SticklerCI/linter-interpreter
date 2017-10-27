@@ -1,0 +1,22 @@
+{
+  "name": "linter-interpreter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "bin": "dist/cli.js",
+  "scripts": {
+    "tsc": "tsc",
+    "posttsc": "chmod a+x dist/cli.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^8.0.47",
+    "get-stdin": "^5.0.1",
+    "inversify": "^4.3.0",
+    "reflect-metadata": "^0.1.10",
+    "typescript": "^2.5.3",
+    "yargs": "^10.0.3"
+  }
+}

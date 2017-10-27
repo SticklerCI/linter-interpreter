@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+      "target": "es5",
+      "lib": ["es6"],
+      "types": ["reflect-metadata"],
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "outDir": "dist",
+      "sourceMap": true
+  },
+  "files": [
+    "./node_modules/@types/node/index.d.ts"
+  ],
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
