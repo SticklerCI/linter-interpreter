@@ -7,6 +7,7 @@
   "scripts": {
     "tsc": "tsc",
     "posttsc": "chmod a+x dist/cli.js",
+    "postinstall": "yarn run tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
