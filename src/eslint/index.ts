@@ -1,10 +1,10 @@
-import { injectable } from "inversify";
-import "reflect-metadata";
-import ILinterInterpreter, { 
-  OutputReports
+import { injectable } from 'inversify';
+import 'reflect-metadata';
+import ILinterInterpreter, {
+  OutputReports,
 } from '../types/linter-interpreter';
 import {
-  EslintInputReports
+  EslintInputReports,
 } from './types';
 
 function flatten(input: any[][]): any[] {

@@ -8,7 +8,7 @@
     "tsc": "tsc",
     "posttsc": "chmod a+x dist/cli.js",
     "postinstall": "yarn run tsc",
-    "lint": "tslint --config tslint.json --format stylish src/**/*.ts tests/**/*.ts",
+    "lint": "tslint --config tslint.json --format stylish src/**/**/*.ts tests/**/**/*.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

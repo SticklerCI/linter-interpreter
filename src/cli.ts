@@ -2,10 +2,10 @@
 
 import getStdin = require('get-stdin');
 import {
-  argv
+  argv,
 } from 'yargs';
 
-import { myContainer } from "./inversify.config";
+import { myContainer } from './inversify.config';
 import TYPES, { ILinterInterpreter } from './types';
 
 getStdin()
@@ -18,5 +18,7 @@ getStdin()
     process.stdout.write(`${JSON.stringify(output)}\n`);
   })
   .catch((error) => {
+
+    // tslint:disable-next-line:no-console
     console.error(error);
   });

@@ -1,16 +1,14 @@
-export type InputReports = ReadonlyArray<InputReport>
-export type OutputReports = ReadonlyArray<OutputReport>
+export type InputReports = ReadonlyArray<{}>;
+export type OutputReports = ReadonlyArray<IOutputReport>;
 
-export interface InputReport {}
-
-export interface OutputReport {
-  linter: string,
-  rule: string,
-  filepath: string,
-  line: number,
-  column: number,
+export interface IOutputReport {
+  linter: string;
+  rule: string;
+  filepath: string;
+  line: number;
+  column: number;
 }
 
 export default interface ILinterInterpreter {
-  interpret(inputReports: InputReports) : OutputReports;
+  interpret(inputReports: InputReports): OutputReports;
 }

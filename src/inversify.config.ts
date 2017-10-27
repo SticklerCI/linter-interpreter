@@ -1,5 +1,7 @@
-import { Container } from "inversify";
-import TYPES, { ILinterInterpreter } from "./types";
+import { Container } from 'inversify';
+
+import TYPES, { ILinterInterpreter } from './types';
+
 import EslintInterpreter from './eslint';
 import TsLintInterpreter from './tslint';
 
