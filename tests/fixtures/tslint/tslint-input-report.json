@@ -1,0 +1,23 @@
+[
+  {
+  "endPosition": {
+    "character": 37,
+    "line": 2,
+    "position": 58
+  },
+  "failure": "\" should be '",
+  "fix": {
+    "innerStart": 47,
+    "innerLength": 11,
+    "innerText": "'get-stdin'"
+  },
+  "name": "src/cli.ts",
+  "ruleName": "quotemark",
+  "ruleSeverity": "ERROR",
+  "startPosition": {
+    "character": 26,
+    "line": 2,
+    "position": 47
+  }
+}
+]

@@ -1,0 +1,7 @@
+{
+  "linter": "eslint",
+  "rule": "no-warning-comments",
+  "filepath": "/Users/sindresorhus/dev/eslint-json/index.js",
+  "line": 8,
+  "column": 2
+}

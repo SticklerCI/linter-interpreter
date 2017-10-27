@@ -1,0 +1,52 @@
+{
+  "name": "linter-interpreter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "bin": "dist/cli.js",
+  "scripts": {
+    "tsc": "tsc",
+    "posttsc": "chmod a+x dist/cli.js",
+    "postinstall": "yarn run tsc",
+    "lint": "tslint --config tslint.json --format stylish src/**/**/*.ts tests/**/**/*.ts",
+    "test": "nyc mocha -r ts-node/register tests/**/*.spec.ts",
+    "coverage": "nyc --reporter lcovonly mocha -r ts-node/register tests/**/*.spec.ts",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "html-coverage-report": "nyc report --reporter html"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "**/*.d.ts",
+      "**/*.js",
+      "**/*.spec.*"
+    ],
+    "reporter": [
+      "text"
+    ],
+    "all": true
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^8.0.47",
+    "get-stdin": "^5.0.1",
+    "inversify": "^4.3.0",
+    "reflect-metadata": "^0.1.10",
+    "typescript": "^2.5.3",
+    "yargs": "^10.0.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.44",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "mocha": "^4.0.1",
+    "mocha-lcov-reporter": "^1.3.0",
+    "nyc": "^11.2.1",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.8.0"
+  }
+}
