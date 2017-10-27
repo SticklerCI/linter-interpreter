@@ -9,7 +9,7 @@
     "posttsc": "chmod a+x dist/cli.js",
     "postinstall": "yarn run tsc",
     "lint": "tslint --config tslint.json --format stylish src/**/**/*.ts tests/**/**/*.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r ts-node/register tests/**/*.spec.ts"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +22,11 @@
     "yargs": "^10.0.3"
   },
   "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.44",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "ts-node": "^3.3.0",
     "tslint": "^5.8.0"
   }
 }

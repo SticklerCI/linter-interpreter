@@ -1,0 +1,7 @@
+{
+  "linter": "tslint",
+  "rule": "quotemark",
+  "filepath": "src/cli.ts",
+  "line": 2,
+  "column": 47
+}
