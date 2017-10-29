@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { spawn } from 'child_process';
+import cliTester from './util/cli-tester';
 
 import TslintInterpreter from '../src/tslint';
 
@@ -22,17 +22,11 @@ describe('TslintInterpreter', () => {
 
   describe('use with cli', () => {
     it('should produce the expected output', (done) => {
-      const cli = spawn('sh', [
-        '-c', 'cat tests/fixtures/tslint/tslint-input-report.json | ts-node src/cli.ts --linter tslint',
-      ]);
-      let output = '';
-      cli.stdout.on('data', (data) => {
-        output += data;
-      });
-
-      cli.on('close', () => {
-        const parsed = JSON.parse(output);
-        expect(parsed[0])
+      cliTester({
+        inputPath: 'tests/fixtures/tslint/tslint-input-report.json',
+        linter: 'tslint',
+      }).then((output) => {
+        expect(output[0])
           .to.include(expectedOutput);
         done();
       });
