@@ -5,6 +5,7 @@ script:
   - yarn run tsc
   - yarn run lint
   - yarn run coverage
+  - yarn run cpd
 after_success:
   - yarn run coveralls
 before_install: yarn global add greenkeeper-lockfile@1

@@ -1,0 +1,10 @@
+#.cpd.yaml
+
+languages:
+  - typescript
+files:
+  - "**/*.ts"
+exclude:
+  - "node_modules/**/*"
+reporter: json
+limit: 5
