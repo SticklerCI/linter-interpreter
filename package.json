@@ -12,7 +12,8 @@
     "test": "nyc mocha -r ts-node/register tests/**/*.spec.ts",
     "coverage": "nyc --reporter lcovonly mocha -r ts-node/register tests/**/*.spec.ts",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "html-coverage-report": "nyc report --reporter html"
+    "html-coverage-report": "nyc report --reporter html",
+    "cpd": "jscpd"
   },
   "nyc": {
     "extension": [
@@ -43,6 +44,7 @@
     "@types/mocha": "^2.2.44",
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
+    "jscpd": "^0.6.15",
     "mocha": "^4.0.1",
     "mocha-lcov-reporter": "^1.3.0",
     "nyc": "^11.2.1",
