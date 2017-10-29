@@ -12,7 +12,6 @@ export default ({ inputPath, linter }) => {
     });
 
     cli.on('close', () => {
-      const parsed = JSON.parse(output);
       resolve(JSON.parse(output));
     });
   });
