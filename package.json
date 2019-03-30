@@ -32,7 +32,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/node": "^10.0.7",
+    "@types/node": "^11.12.1",
     "get-stdin": "^5.0.1",
     "inversify": "^4.3.0",
     "reflect-metadata": "^0.1.10",
